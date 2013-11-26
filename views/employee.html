@@ -1,0 +1,91 @@
+<div class="page-header">
+        <h1><%= title %></h1>
+        <p>Welcome to <%= title %></p>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+        <form class="form-horizontal" action="/employee" method="post">
+          <fieldset>
+          
+          <!-- Form Name -->
+          <legend>Employees</legend>
+          
+          <!-- Text input-->
+          <div class="form-group">
+            <label class="col-md-4 control-label" for="fname">First name: </label>  
+            <div class="col-md-6">
+            <input id="fname" name="fname" type="text" placeholder="Enter first name here" class="form-control input-md" required="">
+              
+            </div>
+          </div>
+          
+          <!-- Text input-->
+          <div class="form-group">
+            <label class="col-md-4 control-label" for="mname">Middle name: </label>  
+            <div class="col-md-6">
+            <input id="mname" name="mname" type="text" placeholder="Enter middle name here" class="form-control input-md">
+              
+            </div>
+          </div>
+          
+          <!-- Text input-->
+          <div class="form-group">
+            <label class="col-md-4 control-label" for="lname">Last name</label>  
+            <div class="col-md-6">
+            <input id="lname" name="lname" type="text" placeholder="Enter last name here" class="form-control input-md" required="">
+              
+            </div>
+          </div>
+          
+          <!-- Select Basic -->
+          <div class="form-group">
+            <label class="col-md-4 control-label" for="position_id">Position: </label>
+            <div class="col-md-6">
+              <select id="position_id" name="position_id" class="form-control">
+                <option value="1">Option one</option>
+                <option value="2">Option two</option>
+              </select>
+            </div>
+          </div>
+          
+          <!-- Textarea -->
+          <div class="form-group">
+            <label class="col-md-4 control-label" for="address">Address: </label>
+            <div class="col-md-6">                     
+              <textarea class="form-control" id="address" name="address"></textarea>
+            </div>
+          </div>
+          
+          <!-- Text input-->
+          <div class="form-group">
+            <label class="col-md-4 control-label" for="contact">Contact details: </label>  
+            <div class="col-md-6">
+            <input id="contact" name="contact" type="text" placeholder="Enter contact details here" class="form-control input-md">
+              
+            </div>
+          </div>
+          
+          <!-- Text input-->
+          <div class="form-group">
+            <label class="col-md-4 control-label" for="mobile">Mobile number: </label>  
+            <div class="col-md-6">
+            <input id="mobile" name="mobile" type="text" placeholder="Enter mobile number here" class="form-control input-md">
+              
+            </div>
+          </div>
+          
+         <!-- Buttons -->
+         <div class="form-group">
+           <label class="col-md-5 control-label" for=""></label>
+           <div class="col-md-7">
+             <button typee="reset" class="btn btn-default">Reset</button>
+             <button type="submit" class="btn btn-default">Add new employee</button>
+           </div>
+         </div>
+          
+          </fieldset>
+          </form>
+          </div>
+          <div class="col-md-6">
+          </div>
+      </div>
