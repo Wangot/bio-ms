@@ -9,6 +9,10 @@ var path = require('path');
 var orm = require('orm');
 var app = express();
 
+var ejs = require('ejs');
+ejs.open = '{{';
+ejs.close = '}}';
+
 //Database connection
 app.use(orm.express("mysql://biofrost:biofrost@localhost/biofrost", {}));
 

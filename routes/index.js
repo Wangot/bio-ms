@@ -8,14 +8,12 @@ var routes = require('./');
 var utilities = require('./../models/helper/ViewUtilities');
 
 module.exports = function(app){
-	app.get('/users', require('./employee'));
-	app.get('/employee', function(req, res){
-		var temp = __dirname + './../views/main.html';
-		utilities.render(res, temp, { title: 'Express'});
-	});
 	app.get('/', function(req, res){
 		res.render('index', { title: 'Express', body: 'eman'});
 	});
+	app.get('/main', require('./employee/browse'));
+	app.get('/users', require('./employee'));
+	app.get('/contact', require('./contact/browse'));
 	app.get('/position', function(req, res){
 		res.render('position', { title: 'Position' });
 	});
@@ -55,6 +53,11 @@ module.exports = function(app){
 		});
 
 		res.send("hello");
+	});
+
+	app.get('/employee', function(req, res){
+		console.log(req.body);
+		res.send([{ id: 1, firstName: "Alice", lastName: "Arten", phoneNumber: "555-0184" }, { id: 2, firstName: "Bob", lastName: "Brigham", phoneNumber: "555-0163" }, { id: 3, firstName: "Charlie", lastName: "Campbell", phoneNumber: "555-0129" }, { id: 4, firstName: "Buena", lastName: "Leynes", phoneNumber: "555-0129" }]);
 	});
 
 };
